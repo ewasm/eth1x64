@@ -1,4 +1,4 @@
-# Eth1x64 Initial Variant (Variant 1)
+# Eth1x64 Variant 1 "Apostille"
 
 - [Background](#background)
 - [Requirements](#requirements)

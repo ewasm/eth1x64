@@ -75,8 +75,8 @@ contract XToken {
     require(receipt.shardid != block.shardid);
 
     // We assume the token contract has the same address on the originating shard.
-    // Also assume msg.sender is set to the originator of the transfer (this token on the foreign shard).
-    require(msg.sender == this);
+    // Also assume receipt.sender is set to the originator of the transfer (this token on the foreign shard).
+    require(receipt.sender == this);
 
     balances[_to] += _value;
     localSupply += _value;
@@ -179,8 +179,8 @@ contract WrappedXToken {
     require(receipt.shardid != block.shardid);
 
     // We assume the token contract has the same address on the originating shard.
-    // Also assume msg.sender is set to the originator of the transfer (this token on the foreign shard).
-    require(msg.sender == this);
+    // Also assume receipt.sender is set to the originator of the transfer (this token on the foreign shard).
+    require(receipt.sender == this);
 
     balances[_to] += _value;
     localSupply += _value;
